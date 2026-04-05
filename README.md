@@ -1,1 +1,0 @@
-# f247810-KBQA-Thesis
