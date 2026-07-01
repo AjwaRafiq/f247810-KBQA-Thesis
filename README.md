@@ -54,4 +54,10 @@ python3 virtuoso.py start 3001 -d virtuoso_db
 python3 virtuoso.py stop 3001
 ```
 
+## Pre-trained Backbone Models
+
+- **BERT-base-uncased**: [huggingface.co/bert-base-uncased](https://huggingface.co/bert-base-uncased)
+- **Llama-3-8B**: [huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
+- **Llama-3.2-3B**: [huggingface.co/meta-llama/Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
+- **Phi-3-mini**: [huggingface.co/microsoft/Phi-3-mini-4k-instruct](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
 
