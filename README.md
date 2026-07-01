@@ -61,3 +61,13 @@ python3 virtuoso.py stop 3001
 - **Llama-3.2-3B**: [huggingface.co/meta-llama/Llama-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
 - **Phi-3-mini**: [huggingface.co/microsoft/Phi-3-mini-4k-instruct](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct)
 
+## Overview
+
+### 1. BERT-based Path Retrieval
+A fine-tuned **BERT-base-uncased** encoder scores all candidate reasoning paths in a compact relation pool using a combined **Cross-Entropy Loss** and **Confidence Advantage Loss**. It returns the **Top-K** most relevant reasoning paths for each question.
+
+### 2. LLM-based Path Reranking
+A parameter-efficiently fine-tuned **Large Language Model (LLM)** reads the question together with the retrieved **Top-K** paths presented as numbered propositions. It predicts the index of the correct reasoning path, avoiding the conflict between fine-tuning objectives and the LLM's prior knowledge that is often observed in end-to-end logical form generation approaches.
+
+### 3. Structure-based SPARQL Generation
+The selected reasoning path is converted into an executable **SPARQL** query using predefined query structures. The generated query is then executed against a locally hosted **Freebase** knowledge base through a **Virtuoso SPARQL endpoint** to retrieve the final answer.
