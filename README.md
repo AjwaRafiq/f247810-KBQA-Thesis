@@ -71,3 +71,14 @@ A parameter-efficiently fine-tuned **Large Language Model (LLM)** reads the ques
 
 ### 3. Structure-based SPARQL Generation
 The selected reasoning path is converted into an executable **SPARQL** query using predefined query structures. The generated query is then executed against a locally hosted **Freebase** knowledge base through a **Virtuoso SPARQL endpoint** to retrieve the final answer.
+
+## Running the Pipeline
+
+1. Preprocess the Dataset
+2. Build BERT Training Data
+3. Train the BERT Retriever
+4. Retrieve Top-K Candidate Paths
+5. Build LLM Instruction Data
+6. Fine-tune the LLM Reranker
+7. Run Inference
+8. Evaluate Generated SPARQL Queries
