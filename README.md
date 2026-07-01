@@ -30,6 +30,28 @@ This work uses the **WebQuestionsSP (WebQSP)** dataset, a widely used benchmark 
 The official WebQSP dataset can be downloaded from the Microsoft Download Center:
 [WebQSP Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52763)
 
+## Freebase Setup
 
+Dataset uses Freebase as the underlying knowledge base. Before running the project, you need to set up a Virtuoso triplestore to host the Freebase RDF data.
+
+**Download Database:**
+
+```bash
+cd Freebase-Setup
+wget https://www.dropbox.com/s/q38g0fwx1a3lz8q/virtuoso_db.zip
+tar -zxvf virtuoso_db.zip
+```
+
+**To start the Virtuoso service:**
+
+```bash
+python3 virtuoso.py start 3001 -d virtuoso_db
+```
+
+**To stop a currently running service at the same port:**
+
+```bash
+python3 virtuoso.py stop 3001
+```
 
 
